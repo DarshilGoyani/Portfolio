@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,10 +8,18 @@
     <link rel="stylesheet" href="fonts/Poppins/stylesheet.css" type="text/css">
     <!-- remix-icon -->
     <link rel="stylesheet" href="remix-icon/remixicon.css" type="text/css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="css/all.min.css" type="text/css">
+    <!-- bootstrap icon -->
+    <link rel="stylesheet" href="css/bootstrap-icons.css" type="text/css">
     <!-- bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <!-- wow animation -->
+    <link rel="stylesheet" href="css/animate.css" type="text/css">
    <!-- main-css -->
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <!-- max css -->
+    <link rel="stylesheet" href="css/max.css" type="text/css">
   
 </head>
 <body>
@@ -25,9 +33,10 @@
                 </div>
                 
                 <!-- offcanvas -->
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="toggler" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas offcanvas-end z-3" tabindex="-1" id="toggler" aria-labelledby="offcanvasRightLabel" data-bs-backdrop="false">
+
                     <div class="offcanvas-header">
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        <button type="bu0tton" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
                         <nav class="d-lg-none">
@@ -52,9 +61,10 @@
                     </ul>
                 </nav>
                 <!-- toggle -->
-                <button class="navbar-toggler mb-3 d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#toggler" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler mb-3 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#toggler" aria-controls="toggler" aria-label="Toggle navigation" data-bs-backdrop="false">
                     <span><i class="ri-menu-5-line text-white fs-3"></i></span>
                 </button>
+
             </div>
         </div>
     </header>
@@ -69,7 +79,7 @@
                     <div class="carousel-item active">
                         <div class="banner-1 active">
                             <div class="container">
-                                <div class="banner-content col-8 position-relative">
+                                <div class="banner-content wow bounceIn col-8 position-relative" data-wow-duration="1.5s">
                                     <h6 class="">HELLO! THIS IS DARSHIL</h6>
                                     <!-- <h1><span>Full Stack</span> Expertise, Tailored for Your Digital Needs.</h1> -->
                                     <!-- <h1>Creative <span>Full Stack</span> Developer – Crafting Complete Web Solutions.</h1> -->
@@ -85,7 +95,7 @@
                     <div class="carousel-item">
                         <div class="banner-2">
                             <div class="container">
-                                <div class="banner-content col-8 position-relative">
+                                <div class="banner-content wow bounceIn col-8 position-relative" data-wow-duration="1.5s">
                                     <h6 class="">HELLO! THIS IS DARSHIL</h6>
                                     <h1><span>Full Stack</span> Expertise, Tailored for Your Digital Needs.</h1>
                                     <!-- <h1>Creative <span>Full Stack</span> Developer – Crafting Complete Web Solutions.</h1> -->
@@ -101,7 +111,7 @@
                     <div class="carousel-item">
                         <div class="banner-3">
                             <div class="container">
-                                <div class="banner-content col-8 position-relative">
+                                <div class="banner-content wow bounceIn col-8 position-relative" data-wow-duration="1.5s">
                                     <h6 class="">HELLO! THIS IS DARSHIL</h6>
                                     <!-- <h1><span>Full Stack</span> Expertise, Tailored for Your Digital Needs.</h1> -->
                                     <h1>Creative <span>Full Stack</span> Developer – Crafting Complete Web Solutions.</h1>
@@ -124,16 +134,16 @@
             <div class="container">
                 <div class="row align-items-center">
                         <div class="col-lg-5">
-                            <div class="about-img">
+                            <div class="about-img wow bounceInLeft" data-wow-duration="2s">
                                 <img src="images/about-me-img.jpg" class="img-fluid" alt="about-me" name="Darshil">
                             </div>
                         </div>
                         <div class="col-lg-7">
-                            <h6>MY INTRO</h6>
-                            <h2>About Me</h2>
-                            <p class="m-0">I’m Darshil Goyani, a Full Stack Developer passionate about building dynamic web applications. With expertise in both front-end and back-end technologies, I create seamless, high-quality solutions that deliver great user experiences.</p>
-                            <div class="about-name d-flex">
-                                <ul class="ps-0 py-5">
+                            <h6 class="wow bounceInRight mt-4 mt-lg-0">MY INTRO</h6>
+                            <h2 class="wow bounceInRight" data-wow-delay="0.5s">About Me</h2>
+                            <p class="m-0 wow bounceInRight" data-wow-delay="1s">I’m Darshil Goyani, a Full Stack Developer passionate about building dynamic web applications. With expertise in both front-end and back-end technologies, I create seamless, high-quality solutions that deliver great user experiences.</p>
+                            <div class="about-name d-flex wow bounceInRight" data-wow-delay="1.5s">
+                                <ul class="ps-0 py-5 ">
                                     <li class="d-flex mb-2"><h5>Name: </h5><span>Darshil Goyani</span></li>
                                     <li class="d-flex mb-2"><h5>Date of birth: </h5><span>January 05, 2006</span></li>
                                     <li class="d-flex mb-2"><h5>Address: </h5><span>153, Sahyog soc. part-2, Punagam, Surat, Gujarat, India 395010</span></li>
@@ -143,33 +153,33 @@
                                 </ul>
                                 
                             </div>
-                            <div class="about-hobby">
+                            <div class="about-hobby wow bounceInUp" data-wow-delay="2s">
                                 <div class="row">
                                     <div class="col-lg-3">
                                         <div class="hobby-item align-self-center align-items-center align-content-center d-flex">
                                             <span class="fs-1 me-2 fw-light">|</span>
-                                            <h4 class="me-2 mb-0"><i class="ri-netease-cloud-music-line fs-5 fw-light"></i></h4>
+                                            <h4 class="me-2 mb-0"><i class="ri-netease-cloud-music-line fs-5 text-white fw-light"></i></h4>
                                             <h5 class="mb-0">Music</h5>
                                         </div>
                                     </div>
                                     <div class="col-lg-3">
                                         <div class="hobby-item align-self-center align-items-center align-content-center d-flex">
                                             <span class="fs-1 me-2 fw-light">|</span>
-                                            <h4 class="me-2 mb-0"><i class="ri-suitcase-3-line fs-5 fw-light"></i></h4>
+                                            <h4 class="me-2 mb-0"><i class="ri-suitcase-3-line fs-5 text-white fw-light"></i></h4>
                                             <h5 class="mb-0">Travel</h5>
                                         </div>
                                     </div>
                                     <div class="col-lg-3">
                                         <div class="hobby-item align-self-center align-items-center align-content-center d-flex">
                                             <span class="fs-1 me-2 fw-light">|</span>
-                                            <h4 class="me-2 mb-0"><i class="ri-film-line fs-5 fw-light"></i></h4>
+                                            <h4 class="me-2 mb-0"><i class="ri-film-line fs-5 text-white fw-light"></i></h4>
                                             <h5 class="mb-0">Movie</h5>
                                         </div>
                                     </div>
                                     <div class="col-lg-3">
                                         <div class="hobby-item align-self-center align-items-center align-content-center d-flex">
                                             <span class="fs-1 me-2 fw-light">|</span>
-                                            <h4 class="me-2 mb-0"><i class="ri-basketball-line fs-5 fw-light"></i></h4>
+                                            <h4 class="me-2 mb-0"><i class="ri-basketball-line fs-5 text-white fw-light"></i></h4>
                                             <h5 class="mb-0">Sports</h5>
                                         </div>
                                     </div>
@@ -184,225 +194,236 @@
         <!-- skill -->
         <section class="skill py" id="skill">
             <div class="container">
-                <div class="skill-title pb-5 text-center">
+                <div class="skill-title text-center mb-5">
                     <h6>SKILLS</h6>
-                    <h2>My Skills</h2>
+                    <h2 class="fw-semibold text-white">My Tech Stack</h2>
                 </div>
-                <div class="row">
-                    <div class="col-lg-3">
-                        <div class="skill-item">
-                            <img src="images/html.png" class="img-fluid" alt="html" name="html">
-                        </div>
+                <div class="floating-skill-grid row justify-content-center">
+                    <!-- HTML Skill Cube -->
+                    <div class="floating-cube d-flex flex-column align-items-center justify-content-center position-relative">
+                        <img src="images/html.png" alt="HTML">
+                        <span class="text-white fw-medium">HTML</span>
                     </div>
-                    <div class="col-lg-3">
-                        <div class="skill-item">
-                            <img src="images/css-3.png" class="img-fluid" alt="css" name="css">
-                        </div>
+                    
+                    <!-- CSS Skill Cube -->
+                    <div class="floating-cube d-flex flex-column align-items-center justify-content-center position-relative">
+                        <img src="images/css-3.png" alt="CSS">
+                        <span class="text-white fw-medium">CSS</span>
                     </div>
-                    <div class="col-lg-3">
-                        <div class="skill-item">
-                            <img src="images/bootstrap.png" class="img-fluid" alt="bootstrap" name="bootstrap">
-                        </div>
+                    
+                    <!-- Bootstrap Skill Cube -->
+                    <div class="floating-cube d-flex flex-column align-items-center justify-content-center position-relative">
+                        <img src="images/bootstrap.png" alt="Bootstrap">
+                        <span class="text-white fw-medium">Bootstrap</span>
                     </div>
-                    <div class="col-lg-3">
-                        <div class="skill-item">
-                            <img src="images/react js.png" class="img-fluid" alt="react" name="react">
-                        </div>
+                    
+                    <!-- JavaScript Skill Cube -->
+                    <div class="floating-cube d-flex flex-column align-items-center justify-content-center position-relative">
+                        <img src="images/js.png" alt="JavaScript">
+                        <span class="text-white fw-medium">JavaScript</span>
                     </div>
-                    <div class="col-lg-3">
-                        <div class="skill-item">
-                            <img src="images/express js.png" class="img-fluid" alt="ex js" name="ex js">
-                        </div>
+                    
+                    <!-- React Skill Cube -->
+                    <div class="floating-cube d-flex flex-column align-items-center justify-content-center position-relative">
+                        <img src="images/react js.png" alt="React">
+                        <span class="text-white fw-medium">React</span>
                     </div>
-                    <div class="col-lg-3">
-                        <div class="skill-item">
-                            <img src="images/github.png" class="img-fluid" alt="github" name="github">
-                        </div>
+            
+                    <!-- GitHub Skill Cube -->
+                    <div class="floating-cube d-flex flex-column align-items-center justify-content-center position-relative">
+                        <img src="images/github.png" alt="GitHub">
+                        <span class="text-white fw-medium">GitHub</span>
                     </div>
-                    <div class="col-lg-3">
-                        <div class="skill-item">
-                            <img src="images/git.png" class="img-fluid" alt="git" name="git">
-                        </div>
+            
+                    <!-- Node.js Skill Cube -->
+                    <div class="floating-cube d-flex flex-column align-items-center justify-content-center position-relative">
+                        <img src="images/programing.png" alt="Node.js">
+                        <span class="text-white fw-medium">Node.js</span>
                     </div>
-                    <div class="col-lg-3">
-                        <div class="skill-item">
-                            <img src="images/js.png" class="img-fluid" alt="js" name="js">
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="skill-item">
-                            <img src="images/j query.png" class="img-fluid" alt="j query" name="j query">
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="skill-item">
-                            <img src="images/mongo db.png" class="img-fluid" alt="mongoDB" name="mongoDB">
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="skill-item">
-                            <img src="images/mysql-logo-1.png" class="img-fluid" alt="mySQL" name="mySQL">
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="skill-item">
-                            <img src="images/programing.png" class="img-fluid" alt="nodejs" name="nodejs">
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="skill-item">
-                            <img src="images/c lang.png" class="img-fluid" alt="nodejs" name="nodejs">
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="skill-item">
-                            <img src="images/photoshop.png" class="img-fluid" alt="nodejs" name="nodejs">
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="skill-item">
-                            <img src="images/animate.png" class="img-fluid" alt="nodejs" name="nodejs">
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="skill-item">
-                            <img src="images/python.png" class="img-fluid" alt="nodejs" name="nodejs">
-                        </div>
+            
+                    <!-- Python Skill Cube -->
+                    <div class="floating-cube d-flex flex-column align-items-center justify-content-center position-relative">
+                        <img src="images/python.png" alt="Python">
+                        <span class="text-white fw-medium">Python</span>
                     </div>
                 </div>
             </div>
         </section>
+          
+          
+          
+          
 
         <!-- project -->
         <section class="project py" id="project">
             
                 <div class="project-title  text-center">
-                    <h6>ACCOMPLISHMENTS</h6>
-                    <h2>My Projects</h2>
+                    <h6 class="wow fadeInRightBig">ACCOMPLISHMENTS</h6>
+                    <h2 class="wow fadeInLeftBig">My Projects</h2>
                 </div>
                 
                 <!-- navs and tabs -->
                 <nav>
                     <ul class="nav justify-content-center my-5" id="myTab">
-                        <li class="nav-item mx-4"><a href="javascript:void(0)" data-bs-target="#all" data-bs-toggle="tab" class="active text-black fw-semibold position-relative">ALL</a></li>
-                        <li class="nav-item mx-4"><a href="javascript:void(0)" data-bs-target="#html" data-bs-toggle="tab" class="text-black fw-semibold position-relative">HTML</a></li>
-                        <li class="nav-item mx-4"><a href="javascript:void(0)" data-bs-target="#css" data-bs-toggle="tab" class="text-black fw-semibold position-relative">CSS</a></li>
-                        <li class="nav-item mx-4"><a href="javascript:void(0)" data-bs-target="#bootstrap" data-bs-toggle="tab" class="text-black fw-semibold position-relative">BOOTSTRAP</a></li>
+                        <li class="nav-item mx-4 wow slideInLeft" data-wow-delay="0.5s"><a href="javascript:void(0)" data-bs-target="#all" data-bs-toggle="tab" class="active text-black fw-semibold position-relative">ALL</a></li>
+                        <li class="nav-item mx-4 wow slideInLeft" data-wow-delay="0s"><a href="javascript:void(0)" data-bs-target="#html" data-bs-toggle="tab" class="text-black fw-semibold position-relative">HTML</a></li>
+                        <li class="nav-item mx-4 wow slideInRight" data-wow-delay="0s"><a href="javascript:void(0)" data-bs-target="#css" data-bs-toggle="tab" class="text-black fw-semibold position-relative">CSS</a></li>
+                        <li class="nav-item mx-4 wow slideInRight" data-wow-delay="0.5s"><a href="javascript:void(0)" data-bs-target="#bootstrap" data-bs-toggle="tab" class="text-black fw-semibold position-relative">BOOTSTRAP</a></li>
                     </ul>
                 </nav>
                 <div class="tab-content px-5">
                     <div class="tab-pane active show fade" id="all">
                         <div class="row">
-                            <div class="col-lg-3 ">
-                                <div class="project-item mb-4">
-                                    <a href="javascript:void(0)"><img src="images/html-1.png" alt="html" class="img-fluid" name="html"></a>
+                            <div class="col-lg-3 wow slideInDown" data-wow-delay="0.3s">
+                                <div class="project-item mb-4 rounded-4 overflow-hidden position-relative">
+                                    <a href="javascript:void(0)" class="position-absolute d-inline-block top-0 start-0 w-100"><img src="images/html-1.jpeg" class="img-fluid w-100" alt="html" name="html"></a>
                                 </div>
                             </div>
-                            <div class="col-lg-3 ">
-                                <div class="project-item mb-4">
-                                    <a href="javascript:void(0)"><img src="images/html-2.png" alt="html" class="img-fluid" name="html"></a>
+                            <div class="col-lg-3 wow slideInDown" data-wow-delay="0.7s">
+                                <div class="project-item mb-4 rounded-4 overflow-hidden position-relative mb-4">
+                                    <a href="javascript:void(0)" class="position-absolute d-inline-block top-0 strat-0 w-100"><img src="images/html-2.jpeg" alt="html" class="img-fluid" name="html"></a>
                                 </div>
                             </div>
-                            <div class="col-lg-3 ">
-                                <div class="project-item mb-4">
-                                    <a href="javascript:void(0)"><img src="images/css-1.png" alt="html" class="img-fluid " name="html"></a>
+                            <div class="col-lg-3 wow slideInDown" data-wow-delay="0.9s">
+                                <div class="project-item mb-4 rounded-4 overflow-hidden position-relative mb-4">
+                                    <a href="javascript:void(0)" class="position-absolute top-0 strat-0 w-100"><img src="images/css-1.jpeg" alt="html" class="img-fluid " name="css"></a>
                                 </div>
                             </div>
-                            <div class="col-lg-3 ">
-                                <div class="project-item mb-4">
-                                    <a href="javascript:void(0)"><img src="images/css-2.png" alt="html" class="img-fluid " name="html"></a>
+                            <div class="col-lg-3 wow slideInDown" data-wow-delay="1.2s">
+                                <div class="project-item mb-4 rounded-4 overflow-hidden position-relative mb-4">
+                                    <a href="javascript:void(0)" class="position-absolute top-0 strat-0 w-100"><img src="images/css-2.jpeg" alt="html" class="img-fluid " name="css"></a>
                                 </div>
                             </div>
-                            <div class="col-lg-3 ">
-                                <div class="project-item mb-4">
-                                    <a href="javascript:void(0)"><img src="images/b-1.png" alt="html" class="img-fluid " name="html"></a>
+                            <div class="col-lg-3 wow slideInDown" data-wow-delay="0.2s">
+                                <div class="project-item mb-4 rounded-4 overflow-hidden position-relative mb-4">
+                                    <a href="javascript:void(0)" class="position-absolute top-0 strat-0 w-100"><img src="images/b-1.jpeg" alt="html" class="img-fluid " name="Bootstrap"></a>
                                 </div>
                             </div>
-                            <div class="col-lg-3 ">
-                                <div class="project-item mb-4">
-                                    <a href="javascript:void(0)"><img src="images/b-2.png" alt="html" class="img-fluid " name="html"></a>
+                            <div class="col-lg-3 wow slideInDown" data-wow-delay="0.6s">
+                                <div class="project-item mb-4 rounded-4 overflow-hidden position-relative mb-4">
+                                    <a href="javascript:void(0)" class="position-absolute top-0 strat-0 w-100"><img src="images/b-2.jpeg" alt="html" class="img-fluid " name="Bootstrap"></a>
                                 </div>
                             </div>
-                            <div class="col-lg-3 ">
-                                <div class="project-item mb-4">
-                                    <a href="javascript:void(0)"><img src="images/b-3.png" alt="html" class="img-fluid " name="html"></a>
+                            <div class="col-lg-3 wow slideInDown" data-wow-delay="0.9s">
+                                <div class="project-item mb-4 rounded-4 overflow-hidden position-relative mb-4">
+                                    <a href="javascript:void(0)" class="position-absolute top-0 strat-0 w-100"><img src="images/b-3.jpeg" alt="html" class="img-fluid " name="Bootstrap"></a>
                                 </div>
                             </div>
-                            <div class="col-lg-3 ">
-                                <div class="project-item mb-4">
-                                    <a href="javascript:void(0)"><img src="images/b-4.png" alt="html" class="img-fluid " name="html"></a>
+                            <div class="col-lg-3 wow slideInDown" data-wow-delay="1.1s">
+                                <div class="project-item mb-4 rounded-4 overflow-hidden position-relative mb-4">
+                                    <a href="javascript:void(0)" class="position-absolute top-0 strat-0 w-100"><img src="images/b-4.jpeg" alt="html" class="img-fluid " name="Bootstrap"></a>
                                 </div>
                             </div>
-                            <div class="col-lg-3 ">
-                                <div class="project-item mb-4">
-                                    <a href="javascript:void(0)"><img src="images/b-5.png" alt="html" class="img-fluid " name="html"></a>
+                            <div class="col-lg-3 wow slideInDown" data-wow-delay="0.1s">
+                                <div class="project-item mb-4 rounded-4 overflow-hidden position-relative mb-4">
+                                    <a href="javascript:void(0)" class="position-absolute top-0 strat-0 w-100"><img src="images/b-5.jpeg" alt="html" class="img-fluid " name="Bootstrap"></a>
                                 </div>
                             </div>
-                            <div class="col-lg-3 ">
-                                <div class="project-item mb-4">
-                                    <a href="javascript:void(0)"><img src="images/b-6.png" alt="html" class="img-fluid " name="html"></a>
+                            <div class="col-lg-3 wow slideInDown" data-wow-delay="0.5s">
+                                <div class="project-item mb-4 rounded-4 overflow-hidden position-relative mb-4">
+                                    <a href="javascript:void(0)" class="position-absolute top-0 strat-0 w-100"><img src="images/b-6.jpeg" alt="html" class="img-fluid " name="Bootstrap"></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 wow slideInDown" data-wow-delay="0.8s">
+                                <div class="project-item mb-4 rounded-4 overflow-hidden position-relative mb-4">
+                                    <a href="javascript:void(0)" class="position-absolute top-0 strat-0 w-100"><img src="images/b-7.jpeg" alt="html" class="img-fluid " name="Bootstrap"></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 wow slideInDown" data-wow-delay="1s">
+                                <div class="project-item mb-4 rounded-4 overflow-hidden position-relative mb-4">
+                                    <a href="javascript:void(0)" class="position-absolute top-0 strat-0 w-100"><img src="images/b-8.jpeg" alt="html" class="img-fluid " name="Bootstrap"></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 wow slideInDown" data-wow-delay="0s">
+                                <div class="project-item mb-4 rounded-4 overflow-hidden position-relative mb-4">
+                                    <a href="javascript:void(0)" class="position-absolute top-0 strat-0 w-100"><img src="images/b-9.jpeg" alt="html" class="img-fluid " name="Bootstrap"></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 wow slideInDown" data-wow-delay="0.4s">
+                                <div class="project-item mb-4 rounded-4 overflow-hidden position-relative mb-4">
+                                    <a href="javascript:void(0)" class="position-absolute top-0 strat-0 w-100"><img src="images/b-10.jpeg" alt="html" class="img-fluid " name="Bootstrap"></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="html">
                         <div class="row">
-                            <div class="col-lg-3 ">
-                                <div class="project-item mb-4">
-                                    <a href="javascript:void(0)"><img src="images/html-1.png" alt="html" class="img-fluid " name="html"></a>
+                            <div class="col-lg-3 " data-wow-delay="0.2s">
+                                <div class="project-item mb-4 rounded-4 z-3 overflow-hidden position-relative">
+                                    <a href="javascript:void(0)" class="position-absolute d-inline-block top-0 start-0 w-100"><img src="images/html-1.jpeg" class="img-fluid w-100" alt="html" name="html"></a>
                                 </div>
                             </div>
-                            <div class="col-lg-3 ">
-                                <div class="project-item mb-4">
-                                    <a href="javascript:void(0)"><img src="images/html-2.png" alt="html" class="img-fluid " name="html"></a>
+                            <div class="col-lg-3 " data-wow-delay="0.5s">
+                                <div class="project-item mb-4 rounded-4 overflow-hidden position-relative mb-4">
+                                    <a href="javascript:void(0)" class="position-absolute d-inline-block top-0 strat-0 w-100"><img src="images/html-2.jpeg" alt="html" class="img-fluid" name="html"></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="css">
                         <div class="row">
-                            <div class="col-lg-3 ">
-                                <div class="project-item mb-4">
-                                    <a href="javascript:void(0)"><img src="images/css-1.png" alt="html" class="img-fluid " name="html"></a>
+                            <div class="col-lg-3 " data-wow-delay="0.8s">
+                                <div class="project-item mb-4 rounded-4 overflow-hidden position-relative mb-4">
+                                    <a href="javascript:void(0)" class="position-absolute top-0 strat-0 w-100"><img src="images/css-1.jpeg" alt="html" class="img-fluid " name="css"></a>
                                 </div>
                             </div>
-                            <div class="col-lg-3 ">
-                                <div class="project-item mb-4">
-                                    <a href="javascript:void(0)"><img src="images/css-2.png" alt="html" class="img-fluid " name="html"></a>
+                            <div class="col-lg-3 " data-wow-delay="1.1s">
+                                <div class="project-item mb-4 rounded-4 overflow-hidden position-relative mb-4">
+                                    <a href="javascript:void(0)" class="position-absolute top-0 strat-0 w-100"><img src="images/css-2.jpeg" alt="html" class="img-fluid " name="css"></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="bootstrap">
                         <div class="row">
-                            <div class="col-lg-3 ">
-                                <div class="project-item mb-4">
-                                    <a href="javascript:void(0)"><img src="images/b-1.png" alt="html" class="img-fluid " name="html"></a>
+                            <div class="col-lg-3 " data-wow-delay="0.1s">
+                                <div class="project-item mb-4 rounded-4 overflow-hidden position-relative mb-4">
+                                    <a href="javascript:void(0)" class="position-absolute top-0 strat-0 w-100"><img src="images/b-1.jpeg" alt="html" class="img-fluid " name="Bootstrap"></a>
                                 </div>
                             </div>
-                            <div class="col-lg-3 ">
-                                <div class="project-item mb-4">
-                                    <a href="javascript:void(0)"><img src="images/b-2.png" alt="html" class="img-fluid " name="html"></a>
+                            <div class="col-lg-3 " data-wow-delay="0.4s">
+                                <div class="project-item mb-4 rounded-4 overflow-hidden position-relative mb-4">
+                                    <a href="javascript:void(0)" class="position-absolute top-0 strat-0 w-100"><img src="images/b-2.jpeg" alt="html" class="img-fluid " name="Bootstrap"></a>
                                 </div>
                             </div>
-                            <div class="col-lg-3 ">
-                                <div class="project-item mb-4">
-                                    <a href="javascript:void(0)"><img src="images/b-3.png" alt="html" class="img-fluid " name="html"></a>
+                            <div class="col-lg-3 " data-wow-delay="0.7s">
+                                <div class="project-item mb-4 rounded-4 overflow-hidden position-relative mb-4">
+                                    <a href="javascript:void(0)" class="position-absolute top-0 strat-0 w-100"><img src="images/b-3.jpeg" alt="html" class="img-fluid " name="Bootstrap"></a>
                                 </div>
                             </div>
-                            <div class="col-lg-3 ">
-                                <div class="project-item mb-4">
-                                    <a href="javascript:void(0)"><img src="images/b-4.png" alt="html" class="img-fluid " name="html"></a>
+                            <div class="col-lg-3 " data-wow-delay="1s">
+                                <div class="project-item mb-4 rounded-4 overflow-hidden position-relative mb-4">
+                                    <a href="javascript:void(0)" class="position-absolute top-0 strat-0 w-100"><img src="images/b-4.jpeg" alt="html" class="img-fluid " name="Bootstrap"></a>
                                 </div>
                             </div>
-                            <div class="col-lg-3 ">
-                                <div class="project-item mb-4">
-                                    <a href="javascript:void(0)"><img src="images/b-5.png" alt="html" class="img-fluid " name="html"></a>
+                            <div class="col-lg-3 " data-wow-delay="0s">
+                                <div class="project-item mb-4 rounded-4 overflow-hidden position-relative mb-4">
+                                    <a href="javascript:void(0)" class="position-absolute top-0 strat-0 w-100"><img src="images/b-5.jpeg" alt="html" class="img-fluid " name="Bootstrap"></a>
                                 </div>
                             </div>
-                            <div class="col-lg-3 ">
-                                <div class="project-item mb-4">
-                                    <a href="javascript:void(0)"><img src="images/b-6.png" alt="html" class="img-fluid " name="html"></a>
+                            <div class="col-lg-3 " data-wow-delay="0.3s">
+                                <div class="project-item mb-4 rounded-4 overflow-hidden position-relative mb-4">
+                                    <a href="javascript:void(0)" class="position-absolute top-0 strat-0 w-100"><img src="images/b-6.jpeg" alt="html" class="img-fluid " name="Bootstrap"></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 " data-wow-delay="0.6s">
+                                <div class="project-item mb-4 rounded-4 overflow-hidden position-relative mb-4">
+                                    <a href="javascript:void(0)" class="position-absolute top-0 strat-0 w-100"><img src="images/b-7.jpeg" alt="html" class="img-fluid " name="Bootstrap"></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 " data-wow-delay="0.9s">
+                                <div class="project-item mb-4 rounded-4 overflow-hidden position-relative mb-4">
+                                    <a href="javascript:void(0)" class="position-absolute top-0 strat-0 w-100"><img src="images/b-8.jpeg" alt="html" class="img-fluid " name="Bootstrap"></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 " data-wow-delay="0s">
+                                <div class="project-item mb-4 rounded-4 overflow-hidden position-relative mb-4">
+                                    <a href="javascript:void(0)" class="position-absolute top-0 strat-0 w-100"><img src="images/b-9.jpeg" alt="html" class="img-fluid " name="Bootstrap"></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 " data-wow-delay="0.9s">
+                                <div class="project-item mb-4 rounded-4 overflow-hidden position-relative mb-4">
+                                    <a href="javascript:void(0)" class="position-absolute top-0 strat-0 w-100"><img src="images/b-10.jpeg" alt="html" class="img-fluid " name="Bootstrap"></a>
                                 </div>
                             </div>
                         </div>
@@ -491,7 +512,7 @@
                     <div class="footer-sec-1">
                         <h4 class="text-white mb-5">Lets talk about</h4>
                         <p class="fs-6">I’m Darshil Goyani, a Full Stack Developer passionate about building dynamic web applications. With expertise in both front-end and back-end technologies.</p>
-                        <a href="#about" class="text-white">Learn more</a>
+                        <a href="#about" class="text-white mb-5 mb-lg-0 d-inline-block">Learn more</a>
                     </div>
                 </div>
                 <div class="col-lg-3">
@@ -531,7 +552,7 @@
                                 <li class="me-2"><a href="https://x.com/?lang=en" target="_blank"><i class="ri-twitter-x-fill fs-5 "></i></a></li>
                                 <li class="me-2"><a href="https://www.facebook.com/" target="_blank"><i class="ri-facebook-fill fs-5 "></i></a></li>
                                 <li class="me-2"><a href="https://www.instagram.com/darshil_goyani.05/" target="_blank"><i class="ri-instagram-line fs-5 "></i></a></li>
-                                <li class="me-2"><a href="http://in.linkedin.com/" target="_blank"><i class="ri-linkedin-box-line fs-5 "></i></a></li>
+                                <li class="me-2"><a href="https://www.linkedin.com/in/darshil-goyani-06ab8a360/" target="_blank"><i class="ri-linkedin-box-line fs-5 "></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -545,10 +566,13 @@
             <a href="#"><i class="ri-arrow-up-s-line p-1 fs-3 text-white rounded rounded-3"></i></a>
         </div>
     </footer>
-    
+    <!-- bootstrap cdn -->
     <script src="js/bootstrap.bundle.min.js" type="text/javascript"></script>
-    
-    
+    <!-- wow animate -->
+    <script src="js/wow.min.js" type="text/javascript"></script>
+    <script>
+        new WOW().init();
+    </script>
 
 </body>
 </html>
