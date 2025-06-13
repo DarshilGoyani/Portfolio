@@ -622,13 +622,15 @@
     </script>
     <!-- j-query code -->
     <script>
-        $(window).on("load", function(){
-  // 5s animation complete hone ka wait karte hain
-  setTimeout(() => {
-    // Fir fade out smoothly karo 1.5s me
-    $(".loader").fadeOut(1500);
-  }, 5000);  // yahan 5000 = 5 seconds (animation duration)
-});
+        $(window).on("load", function() {
+            $("body").addClass("loader-active");
+            setTimeout(() => {
+                $(".loader").fadeOut(1500, function() {
+                $("body").removeClass("loader-active");
+                $(this).remove();
+                });
+            }, 5000);
+        });
 
     </script>
 
