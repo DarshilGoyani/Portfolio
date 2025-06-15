@@ -36,7 +36,7 @@
 <body>
 
     <!-- header -->
-    <header class="position-absolute wow bounce top-0 start-0 w-100 z-3" data-wow-delay="6s">
+    <header class="position-fixed wow bounce top-0 start-0 w-100 z-3" data-wow-delay="6s">
         <div class="container">
             <div class="navbar navbar-expand-lg py-3 align-items-center">
                 <div class="logo">
@@ -584,7 +584,7 @@
 
     <!-- theme switcher -->
     
-        <div class="theme-selector bg-body-secondary shadow rounded-4 p-4">
+        <div class="theme-selector z-3 bg-body-secondary shadow rounded-4 p-4">
             <div class="theme-color" data-color="#9F361F" style="background-color: #9F361F;"></div>
             <div class="theme-color" data-color="#2C3E50" style="background-color: #2C3E50 ;"></div>
             <div class="theme-color" data-color="#819A91" style="background-color: #819A91 ;"></div>
@@ -685,6 +685,19 @@
         });
     });
 </script>
+
+<!-- header -->
+<script>
+    $(window).scroll(function(){
+        if($(this).scrollTop()>150){
+            $("header").addClass("header-active");
+        }
+        else{
+            $("header").removeClass("header-active");
+        }
+    });
+</script>
+
 
       
 
