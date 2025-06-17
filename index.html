@@ -36,7 +36,7 @@
 <body>
 
     <!-- header -->
-    <header class="position-fixed wow bounce top-0 start-0 w-100 z-3" data-wow-delay="6s">
+    <header class="position-fixed overflow-visible wow bounce top-0 start-0 w-100 z-3" data-wow-delay="6s">
         <div class="container">
             <div class="navbar navbar-expand-lg py-3 align-items-center">
                 <div class="logo">
@@ -697,6 +697,50 @@
         }
     });
 </script>
+
+<!-- botto-to-top -->
+<script>
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > 400) {
+            $(".bottom-to-top").css("display", "block");
+        } else {
+            $(".bottom-to-top").css("display", "none");
+        }
+    });
+</script>
+<!-- header nav baar active code -->
+<script>
+    $(document).ready(function () {
+        const sections = $("section"); // all your main sections
+        const navLinks = $("nav ul li a");
+
+        $(window).on("scroll", function () {
+            let currentPos = $(this).scrollTop();
+
+            sections.each(function () {
+                const top = $(this).offset().top - 100;
+                const bottom = top + $(this).outerHeight();
+                const id = $(this).attr("id");
+
+                if (currentPos >= top && currentPos <= bottom) {
+                    navLinks.removeClass("active");
+                    $('nav ul li a[href="#' + id + '"]').addClass("active");
+                }
+            });
+        });
+
+        // Optional: Smooth scroll on nav link click
+        navLinks.on("click", function (e) {
+            e.preventDefault();
+            const target = $($(this).attr("href"));
+            $("html, body").animate({
+                scrollTop: target.offset().top - 80
+            }, 600);
+        });
+    });
+</script>
+
+
 
 
       
