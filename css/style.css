@@ -303,7 +303,7 @@ nav ul li a.active{
     padding: 15px 20px;
     border: 2px solid var(--theme-color);
     font-size: 14px;
-    color: var(--gray-color);
+    color: var(--theme-color);
 }
 .contact form input:focus , .contact form textarea:focus{
     outline: none;

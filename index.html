@@ -605,6 +605,7 @@
     <script src="js/jquery.min.js" type="text/javascript"></script>
     <!-- bootstrap cdn -->
     <script src="js/bootstrap.bundle.min.js" type="text/javascript"></script>
+
     <!-- wow animate -->
     <script src="js/wow.min.js" type="text/javascript"></script>
     <script>
@@ -684,61 +685,61 @@
             isOpen = !isOpen;
         });
     });
-</script>
+    </script>
 
-<!-- header -->
-<script>
-    $(window).scroll(function(){
-        if($(this).scrollTop()>150){
-            $("header").addClass("header-active");
-        }
-        else{
-            $("header").removeClass("header-active");
-        }
-    });
-</script>
+    <!-- header -->
+    <script>
+        $(window).scroll(function(){
+            if($(this).scrollTop()>150){
+                $("header").addClass("header-active");
+            }
+            else{
+                $("header").removeClass("header-active");
+            }
+        });
+    </script>
 
-<!-- botto-to-top -->
-<script>
-    $(window).scroll(function(){
-        if ($(this).scrollTop() > 400) {
-            $(".bottom-to-top").css("display", "block");
-        } else {
-            $(".bottom-to-top").css("display", "none");
-        }
-    });
-</script>
-<!-- header nav baar active code -->
-<script>
-    $(document).ready(function () {
-        const sections = $("section"); // all your main sections
-        const navLinks = $("nav ul li a");
+    <!-- botto-to-top -->
+    <script>
+        $(window).scroll(function(){
+            if ($(this).scrollTop() > 400) {
+                $(".bottom-to-top").css("display", "block");
+            } else {
+                $(".bottom-to-top").css("display", "none");
+            }
+        });
+    </script>
+    <!-- header nav baar active code -->
+    <script>
+        $(document).ready(function () {
+            const sections = $("section"); // all your main sections
+            const navLinks = $("header nav ul li a");
 
-        $(window).on("scroll", function () {
-            let currentPos = $(this).scrollTop();
+            $(window).on("scroll", function () {
+                let currentPos = $(this).scrollTop();
 
-            sections.each(function () {
-                const top = $(this).offset().top - 100;
-                const bottom = top + $(this).outerHeight();
-                const id = $(this).attr("id");
+                sections.each(function () {
+                    const top = $(this).offset().top - 100;
+                    const bottom = top + $(this).outerHeight();
+                    const id = $(this).attr("id");
 
-                if (currentPos >= top && currentPos <= bottom) {
-                    navLinks.removeClass("active");
-                    $('nav ul li a[href="#' + id + '"]').addClass("active");
-                }
+                    if (currentPos >= top && currentPos <= bottom) {
+                        navLinks.removeClass("active");
+                        $('header nav ul li a[href="#' + id + '"]').addClass("active");
+                    }
+                });
+            });
+
+            // Optional: Smooth scroll on nav link click
+            navLinks.on("click", function (e) {
+                e.preventDefault();
+                const target = $($(this).attr("href"));
+                $("html, body").animate({
+                    scrollTop: target.offset().top - 80
+                }, 600);
             });
         });
-
-        // Optional: Smooth scroll on nav link click
-        navLinks.on("click", function (e) {
-            e.preventDefault();
-            const target = $($(this).attr("href"));
-            $("html, body").animate({
-                scrollTop: target.offset().top - 80
-            }, 600);
-        });
-    });
-</script>
+    </script>
 
 
 
