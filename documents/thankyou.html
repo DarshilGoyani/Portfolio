@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Message Sent</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: white;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+      color: #333;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+
+    h1 {
+      color: #4CAF50;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    .tick {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 6px solid #4CAF50;
+      margin: 0 auto 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .tick::after {
+      content: '';
+      width: 25px;
+      height: 50px;
+      border-right: 6px solid #4CAF50;
+      border-bottom: 6px solid #4CAF50;
+      transform: rotate(45deg);
+    }
+
+    .btn {
+      padding: 12px 24px;
+      background-color: #4CAF50;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #388E3C;
+    }
+
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+
+<canvas id="confetti-canvas"></canvas>
+
+<div class="content">
+  <div class="tick"></div>
+  <h1>Message Sent Successfully</h1>
+  <p>Thank you for reaching out! We will get back to you soon. 😊</p>
+  <a href="../index.html" class="btn">Back to Home</a>
+</div>
+
+<script>
+  const canvas = document.getElementById('confetti-canvas');
+  const ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  const colors = ['#FF3B3F', '#FFBB00', '#4CAF50', '#00BCD4', '#3F51B5', '#9C27B0', '#E91E63', '#FF9800'];
+  const confetti = [];
+
+  for (let i = 0; i < 150; i++) {
+    confetti.push({
+      x: canvas.width / 2,
+      y: canvas.height / 2,
+      r: Math.random() * 6 + 4,
+      color: colors[Math.floor(Math.random() * colors.length)],
+      angle: Math.random() * 2 * Math.PI,
+      speed: Math.random() * 8 + 4,
+      gravity: 0.3,
+      rotation: Math.random() * 10,
+      alpha: 1
+    });
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    confetti.forEach(p => {
+      ctx.globalAlpha = p.alpha;
+      ctx.beginPath();
+      ctx.fillStyle = p.color;
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Update position
+      p.x += Math.cos(p.angle) * p.speed;
+      p.y += Math.sin(p.angle) * p.speed + p.gravity;
+      p.speed *= 0.98; // Slow down
+      p.alpha -= 0.01;
+    });
+
+    ctx.globalAlpha = 1;
+
+    requestAnimationFrame(draw);
+  }
+
+  draw();
+
+  // Resize support
+  window.addEventListener('resize', () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  });
+</script>
+
+</body>
+</html>
